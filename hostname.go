@@ -61,7 +61,7 @@ func main() {
 	http.Handle("/health", loggingHandler(http.HandlerFunc(healthHandler)))
 	http.Handle("/toggle.failure", loggingHandler(http.HandlerFunc(healthToggleHandler)))
 	log.Printf("start serving...")
-	err := http.ListenAndServe(":3000", nil)
+	err := http.ListenAndServe(":8000", nil)
 	if err != nil {
 		log.Fatalf("start server error: %v\n", err)
 	}
